@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <a href="{% url 'task_create' %}" class="task-action create">
+        Crear Nueva Tarea
+    </a>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <div>
+                    <strong>{{ task.title }}</strong>
+                    <p>{{ task.description }}</p>
+                </div>
+                <div class="task-action">
+                    <a href="{% url 'task_update' task.pk %}" class="edit">Editar</a>
+                    <a href="{% url 'task_delete' task.pk %}" class="delete">Eliminar</a>
+                </div>
+            </li>
+        {% empty %}
+            <li>No hay tareas.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

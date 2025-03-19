@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Tarea</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Eliminar Tarea</h1>
+    <p>¿Estás seguro que deseas eliminar la tarea "{{ task.title }}"?</p>
+    <div class="confirmation">
+        <form action="" method="post">
+            {% csrf_token %}
+            <button type="submit" class="delete">Eliminar</button>
+        </form>
+        <a href="{% url 'task_list' %}">
+            <button class="cancel">Cancelar</button>
+        </a>
+    </div>
+</body>
+</html>

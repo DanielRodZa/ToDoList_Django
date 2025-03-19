@@ -1,0 +1,139 @@
+body{
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1{
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.task-actions a.edit {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.task-actions a.edit:hover{
+    background-color: #218838;
+}
+
+.task-actions a.delete{
+    background-color: #c82333;
+}
+
+.task-actions a.create{
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.task-actions a.create:hover{
+    background-color: #0056b3;
+}
+
+form {
+    width: 500px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"]{
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover{
+    background-color: #218838;
+}
+
+.confirmation{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.edit,
+.delete
+.confirmation button{
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-actions .delete,
+.confirmation .delete{
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.task-actions .edit{
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.confirmation .delete:hover{
+    background-color: #c82333;
+}
+
+.confirmation .cancel{
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.confirmation .cancel:hover{
+    background-color: #5a6268;
+}
