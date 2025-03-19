@@ -54,7 +54,8 @@ Este proyecto es una aplicación web de lista de tareas desarrollada con Python 
 
 ## Estructura del Proyecto
 
-```todo_project/
+```
+todo_project/
 ├── manage.py
 ├── tasks/
 │   ├── init.py
@@ -69,13 +70,14 @@ Este proyecto es una aplicación web de lista de tareas desarrollada con Python 
 │   │       └── task_confirm_delete.html
 │   └── static/        
 │       └── css/
-│           └── styles.css
-└── todo_project/
+│           ├── styles.css
+│           └── normalize.css
+├── todo_project/
 ├── init.py
 ├── settings.py    
 ├── urls.py        
-└── wsgi.py
-└── requirements.txt  
+├── wsgi.py
+├── requirements.txt  
 └── README.md         
 ```
 ## Uso
